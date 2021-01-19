@@ -1,12 +1,14 @@
+# NOTE: for versions >= 1 (for python 3.6+) see python3-jwt.spec
 #
 # Conditional build:
 %bcond_without	tests	# unit tests
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module (built from python3-jwt.spec)
 
 Summary:	JSON Web Token library for Python 2
 Summary(pl.UTF-8):	Biblioteka JSON Web Token dla Pythona 2
 Name:		python-jwt
+# keep 0.3.x here for python2 support
 Version:	0.3.2
 Release:	1
 License:	MIT
